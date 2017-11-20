@@ -1,38 +1,37 @@
 {
     "parserOptions": {
-        "ecmaVersion": 5,
+        "ecmaVersion": 6,
     },
 
     "env": {
         "browser": true,
-        "node": true
+        "node": true,
+        "es6": true
     },
 
-    "globals": {
-        "$": true
-    },
+    "plugins": [],
 
     "rules": {
         // Possible Errors
-        "no-console": 1,
-        "no-empty": 1,
-        "no-extra-semi": 1,
+        // "no-console": 2,
+        "no-empty": 2,
+        "no-extra-semi": 2,
         "no-func-assign": 2,
         "no-inner-declarations": 2,
 
         // Best Practices
-        "curly": 1,
-        "default-case": 1,
-        "dot-notation": 1,
-        "eqeqeq": 1,
-        "no-alert": 1,
-        "no-caller": 1,
-        "no-eval": 1,
-        "no-labels": 1,
-        "no-lone-blocks": 1,
-        "no-multi-spaces": 1,
-        "no-multi-str": 1,
-        "no-native-reassign": 1,
+        "curly": 2,
+        "default-case": 2,
+        "dot-notation": 2,
+        "eqeqeq": 2,
+        "no-alert": 2,
+        "no-caller": 2,
+        "no-eval": 2,
+        "no-labels": 2,
+        "no-lone-blocks": 2,
+        "no-multi-spaces": 2,
+        "no-multi-str": 2,
+        "no-native-reassign": 2,
 
         "no-new": 2,
         "no-new-func": 2,
@@ -53,14 +52,9 @@
         "no-undef-init": 2,
         "no-unused-vars": 2,
 
-        "strict": [2, "function"],
-        "indent": ["error", 4, {
-            "SwitchCase": 1
-        }],
-
         // Stylistic Issues
         "brace-style": [1, "1tbs"],
-        "camelcase": 0,
+        "camelcase": 1,
         "comma-spacing": 1,
         "eol-last": 1,
         "key-spacing": 1,
@@ -68,20 +62,19 @@
         "new-parens": 1,
         "no-array-constructor": 1,
         "no-spaced-func": 1,
-        "no-trailing-spaces": [1, {
-            "skipBlankLines": true
-        }],
+        "no-trailing-spaces": [1, { "skipBlankLines": true }],
         "quotes": [1, "single"],
-        "semi": 1,
-        "semi-spacing": [1, {
-            "before": false,
-            "after": true
-        }],
+        "semi": [1, "never"],
+        "semi-spacing": [1, {"before": false, "after": true}],
         "space-infix-ops": 1,
-        "space-unary-ops": [1, {
-            words: true,
-            nonwords: false
-        }],
-        "no-mixed-spaces-and-tabs": [1, "smart-tabs"]
+        "space-unary-ops": [1, {"words": true, "nonwords": false}],
+        "no-mixed-spaces-and-tabs": [1, "smart-tabs"],
+
+        // ECMAScript 6
+        "no-class-assign": 2,
+        "no-const-assign": 2,
+        "no-dupe-class-members": 2,
+        "no-this-before-super": 2,
+        "no-var": 2,
     }
 }
