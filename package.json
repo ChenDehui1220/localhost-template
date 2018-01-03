@@ -11,17 +11,16 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.18.13",
-    "concurrently": "^3.5.0",
+    "compression": "^1.7.1",
+    "express": "^4.16.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean-css": "^3.9.0",
+    "gulp-minify": "^2.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
-    "uglify": "^0.1.5"
+    "path": "^0.12.7"
   },
   "dependencies": {
-    "express": "^4.16.2",
-    "path": "^0.12.7"
   }
 }

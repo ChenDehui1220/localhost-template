@@ -1,25 +1,17 @@
 {
     "parserOptions": {
-        "ecmaVersion": 6,
+        "ecmaVersion": 6
     },
-
     "env": {
         "browser": true,
-        "node": true,
-        "es6": true
+        "jquery": true,
+        "node": true
     },
-
     "plugins": [],
-
     "rules": {
-        // Possible Errors
-        // "no-console": 2,
         "no-empty": 2,
-        "no-extra-semi": 2,
         "no-func-assign": 2,
         "no-inner-declarations": 2,
-
-        // Best Practices
         "curly": 2,
         "default-case": 2,
         "dot-notation": 2,
@@ -32,7 +24,6 @@
         "no-multi-spaces": 2,
         "no-multi-str": 2,
         "no-native-reassign": 2,
-
         "no-new": 2,
         "no-new-func": 2,
         "no-new-object": 2,
@@ -43,17 +34,16 @@
         "no-script-url": 2,
         "no-unused-expressions": 2,
         "no-with": 2,
-
-        // Variables
         "no-label-var": 2,
         "no-shadow": 2,
         "no-shadow-restricted-names": 2,
         "no-undef": 2,
         "no-undef-init": 2,
         "no-unused-vars": 2,
-
-        // Stylistic Issues
-        "brace-style": [1, "1tbs"],
+        "brace-style": [
+            1,
+            "1tbs"
+        ],
         "camelcase": 1,
         "comma-spacing": 1,
         "eol-last": 1,
@@ -62,19 +52,38 @@
         "new-parens": 1,
         "no-array-constructor": 1,
         "no-spaced-func": 1,
-        "no-trailing-spaces": [1, { "skipBlankLines": true }],
-        "quotes": [1, "single"],
-        "semi": [1, "never"],
-        "semi-spacing": [1, {"before": false, "after": true}],
+        "no-trailing-spaces": [
+            1,
+            {
+                "skipBlankLines": true
+            }
+        ],
+        "quotes": [
+            1,
+            "single"
+        ],
+        "semi-spacing": [
+            1,
+            {
+                "before": false,
+                "after": true
+            }
+        ],
         "space-infix-ops": 1,
-        "space-unary-ops": [1, {"words": true, "nonwords": false}],
-        "no-mixed-spaces-and-tabs": [1, "smart-tabs"],
-
-        // ECMAScript 6
+        "space-unary-ops": [
+            1,
+            {
+                "words": true,
+                "nonwords": false
+            }
+        ],
+        "no-mixed-spaces-and-tabs": [
+            1,
+            "smart-tabs"
+        ],
         "no-class-assign": 2,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
-        "no-this-before-super": 2,
-        "no-var": 2,
+        "no-this-before-super": 2
     }
 }
