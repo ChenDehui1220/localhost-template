@@ -26,14 +26,18 @@
       .src(config.src.sass)
       .pipe(sass({ outputStyle: 'compressed' }))
       .pipe(gulp.dest(config.dest.sass))
-      .pipe(browserSync.stream())
+      .on('end', () => {
+        browserSync.stream()
+      })
   }
 
   const minifyHTML = function() {
     return gulp
       .src(config.src.html)
       .pipe(gulp.dest(config.dest.html))
-      .pipe(browserSync.reload())
+      .on('end', () => {
+        browserSync.reload()
+      })
   }
 
   const watchMinifyJS = file => {
@@ -43,15 +47,13 @@
         minify({
           noSource: true,
           ext: {
-            min: '-min.js'
+            min: '.js'
           }
         })
       )
-      .pipe(gulp.dest(config[env].dest.js))
+      .pipe(gulp.dest(config.dest.js))
       .on('end', function() {
-        if (env === 'dev') {
-          browserSync.reload()
-        }
+        browserSync.reload()
       })
       .on('error', function(err) {
         console.log(err)
