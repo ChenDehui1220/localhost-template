@@ -142,6 +142,7 @@
             server: {
                 baseDir: './dest'
             },
+            https: true,
             serveStatic: [{
                     route: '/images',
                     dir: './dest/public/images'
