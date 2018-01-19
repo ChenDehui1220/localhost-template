@@ -9,7 +9,9 @@
     },
     "plugins": [],
     "rules": {
+        "no-console": 2,
         "no-empty": 2,
+        "no-extra-semi": 2,
         "no-func-assign": 2,
         "no-inner-declarations": 2,
         "curly": 2,
@@ -40,10 +42,7 @@
         "no-undef": 2,
         "no-undef-init": 2,
         "no-unused-vars": 2,
-        "brace-style": [
-            1,
-            "1tbs"
-        ],
+        "brace-style": [1, "1tbs"],
         "camelcase": 1,
         "comma-spacing": 1,
         "eol-last": 1,
@@ -52,38 +51,25 @@
         "new-parens": 1,
         "no-array-constructor": 1,
         "no-spaced-func": 1,
-        "no-trailing-spaces": [
-            1,
-            {
-                "skipBlankLines": true
-            }
-        ],
-        "quotes": [
-            1,
-            "single"
-        ],
-        "semi-spacing": [
-            1,
-            {
-                "before": false,
-                "after": true
-            }
-        ],
+        "no-trailing-spaces": [1, {
+            "skipBlankLines": true
+        }],
+        "quotes": [1, "single"],
+        "semi": [1, "never"],
+        "semi-spacing": [1, {
+            "before": false,
+            "after": true
+        }],
         "space-infix-ops": 1,
-        "space-unary-ops": [
-            1,
-            {
-                "words": true,
-                "nonwords": false
-            }
-        ],
-        "no-mixed-spaces-and-tabs": [
-            1,
-            "smart-tabs"
-        ],
+        "space-unary-ops": [1, {
+            "words": true,
+            "nonwords": false
+        }],
+        "no-mixed-spaces-and-tabs": [1, "smart-tabs"],
         "no-class-assign": 2,
         "no-const-assign": 2,
         "no-dupe-class-members": 2,
-        "no-this-before-super": 2
+        "no-this-before-super": 2,
+        "no-var": 2
     }
 }

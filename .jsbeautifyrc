@@ -1,0 +1,12 @@
+{
+  "indent_size": 4,
+  "indent_with_tabs": false,
+  "preserve_newlines": true,
+  "break_chained_methods": true,
+  "keep_array_indentation": false,
+  "keep_function_indentation": false,
+  "html": {
+    "indent_size": 2,
+    "content_unformatted": []
+  }
+}
