@@ -5,6 +5,7 @@
   "break_chained_methods": true,
   "keep_array_indentation": false,
   "keep_function_indentation": false,
+  "end_with_newline": true,
   "html": {
     "indent_size": 2,
     "content_unformatted": []
