@@ -69,9 +69,9 @@
             )
             .pipe(
                 minify({
-                    noSource: true,
+                    noSource: false,
                     ext: {
-                        min: '.js'
+                        min: '-min.js'
                     }
                 })
                 .on('error', o => {
@@ -97,6 +97,7 @@
             )
             .pipe(
                 minify({
+                    noSource: false,
                     ext: {
                         min: '-min.js'
                     }
@@ -142,6 +143,7 @@
             server: {
                 baseDir: './dest'
             },
+            httpModule: 'http2',
             https: true,
             serveStatic: [{
                     route: '/images',
