@@ -142,10 +142,7 @@
             server: {
                 baseDir: './dest'
             },
-            https: {
-                key: 'localhost.key',
-                cert: 'localhost.crt'
-            },
+            https: true,
             serveStatic: [{
                     route: '/images',
                     dir: './dest/public/images'
