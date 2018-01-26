@@ -143,6 +143,7 @@
             server: {
                 baseDir: './dest'
             },
+            open: false,
             httpModule: 'http2',
             https: true,
             serveStatic: [{
