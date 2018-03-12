@@ -2,11 +2,12 @@
     "parserOptions": {
         "ecmaVersion": 6
     },
-    "env": {
-        "browser": true,
-        "jquery": true,
-        "node": true
-    },
+    "presets": ["env", {
+        "targets": {
+            "node": "current"
+        },
+        "modules": false
+    }],
     "plugins": [],
     "rules": {
         "no-console": 2,
