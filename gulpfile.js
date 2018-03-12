@@ -14,18 +14,20 @@
     const browserSync = require('browser-sync')
         .create()
 
+    const ROOT = __dirname
+
     const config = {
         src: {
-            js: './src/js/*.js',
-            sass: './src/sass/*.sass',
-            html: './src/html/*.html',
-            images: './src/images/**/*'
+            js: ROOT + '/src/js/*.js',
+            sass: ROOT + '/src/sass/*.sass',
+            html: ROOT + '/src/html/*.html',
+            images: ROOT + '/src/images/**/*'
         },
         dest: {
-            js: './dest/public/js',
-            sass: './dest/public/css',
-            images: './dest/public/images',
-            html: './dest/'
+            js: ROOT + '/dest/public/js',
+            sass: ROOT + '/dest/public/css',
+            images: ROOT + '/dest/public/images',
+            html: ROOT + '/dest/'
         }
     }
     const env = argv.env === undefined || argv.env === 'dev' ? 'dev' : 'prod'
