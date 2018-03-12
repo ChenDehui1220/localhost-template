@@ -22,9 +22,9 @@
     "gulp-minify": "^2.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-watch": "^4.3.11",
+    "http2": "^3.3.7",
     "path": "^0.12.7",
     "yargs": "^10.1.1"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }

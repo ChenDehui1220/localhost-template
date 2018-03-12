@@ -24,9 +24,9 @@
             images: ROOT + '/src/images/**/*'
         },
         dest: {
-            js: ROOT + '/dest/public/js',
-            sass: ROOT + '/dest/public/css',
-            images: ROOT + '/dest/public/images',
+            js: ROOT + '/dest/js',
+            sass: ROOT + '/dest/css',
+            images: ROOT + '/dest/images',
             html: ROOT + '/dest/'
         }
     }
@@ -39,16 +39,10 @@
                 sass({
                     outputStyle: 'compressed'
                 })
-                .on('error', o => {
-                    console.log(o)
-                })
+                .on('error', sass.logError)
             )
             .pipe(gulp.dest(config.dest.sass))
-            .on('end', () => {
-                if (env === 'dev') {
-                    browserSync.stream()
-                }
-            })
+            .pipe(browserSync.stream())
     }
 
     const minifyHTML = function() {
@@ -143,24 +137,27 @@
 
     gulp.task('browser-sync', function() {
         browserSync.init({
+            startPath: '/index.html',
             server: {
                 baseDir: './dest'
             },
             open: false,
+            httpModule: 'http2',
             https: {
                 key: 'server.key',
                 cert: 'server.crt'
             },
+            injectChanges: true,
             serveStatic: [{
                     route: '/images',
-                    dir: './dest/public/images'
+                    dir: './dest/images'
                 },
                 {
                     route: '/css',
-                    dir: './dest/public/css'
+                    dir: './dest/css'
                 }, {
                     route: '/js',
-                    dir: './dest/public/js'
+                    dir: './dest/js'
                 }
             ]
         })
