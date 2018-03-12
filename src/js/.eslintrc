@@ -2,8 +2,14 @@
     "parserOptions": {
         "ecmaVersion": 6
     },
+    "presets": [
+        ["env", {
+            "targets": {
+            }
+        }]
+    ],
     "env": {
-        "node": true
+        "browser": true
     },
     "plugins": [],
     "rules": {
