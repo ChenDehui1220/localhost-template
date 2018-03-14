@@ -61,7 +61,7 @@
             .src(file)
             .pipe(
                 babel({
-                    presets: ['es2015']
+                    presets: ['env']
                 })
             )
             .pipe(
@@ -89,7 +89,7 @@
             .src(config.src.js)
             .pipe(
                 babel({
-                    presets: ['es2015']
+                    presets: ['env']
                 })
             )
             .pipe(
