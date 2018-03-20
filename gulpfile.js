@@ -63,6 +63,9 @@
                 babel({
                     presets: ['env']
                 })
+                .on('error', o => {
+                    console.log(o)
+                })
             )
             .pipe(
                 minify({
@@ -90,6 +93,9 @@
             .pipe(
                 babel({
                     presets: ['env']
+                })
+                .on('error', o => {
+                    console.log(o)
                 })
             )
             .pipe(
@@ -142,11 +148,11 @@
                 baseDir: './dest'
             },
             open: false,
-            httpModule: 'http2',
             https: {
                 key: 'server.key',
                 cert: 'server.crt'
             },
+            logConnections: false,
             injectChanges: true,
             serveStatic: [{
                     route: '/images',
